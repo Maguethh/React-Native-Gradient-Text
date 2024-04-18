@@ -9,30 +9,30 @@ React Native Gradient Text is a custom, reusable component for displaying text w
 
 To install this component, run:
 
-\`\`\`bash
+```bash
 npm install mag-react-native-gradient-text
-\`\`\`
+```
 
 ## Usage
 
 Here's an example of how to use the GradientText component:
 
-\`\`\`jsx
-import GradientText from 'mag-react-native-gradient-text';
+```jsx
+import GradientText from "mag-react-native-gradient-text";
 
 <GradientText
   text="Hello, world!"
   leftColor="#000"
   rightColor="#fff"
   fontSize={20}
-/>
-\`\`\`
+/>;
+```
 
 ## Props
 
 - `text` (string or array of strings): The text to display. If an array is provided, each element will be displayed on a new line.
-- `leftColor` (string): The color at the left end of the gradient.
-- `rightColor` (string): The color at the right end of the gradient.
+- `leftColor` (string): The color at the left end of the gradient (HEX color).
+- `rightColor` (string): The color at the right end of the gradient (HEX color).
 - `fontSize` (number): The font size of the text.
 - `marginLeft`, `marginTop`, `marginRight`, `marginBottom` (numbers): The margins around the text.
 - `textDecorationLine` (string): The decoration to apply to the text (e.g., 'underline', 'line-through').
