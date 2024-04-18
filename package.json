@@ -1,0 +1,17 @@
+{
+  "name": "react-native-gradient-text",
+  "version": "1.0.0",
+  "description": "Simple react native component for expo, featuring a simple customizable gradient text component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Magueth",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "expo-linear-gradient": "*",
+    "@react-native-masked-view/masked-view": "*"
+  }
+}
