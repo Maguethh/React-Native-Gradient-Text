@@ -15,7 +15,7 @@ npm install mag-react-native-gradient-text
 
 ## Usage
 
-Here's an example of how to use the GradientText component:
+Here's an example of how to use the GradientText component :
 
 ```jsx
 import GradientText from "mag-react-native-gradient-text";
