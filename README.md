@@ -10,7 +10,7 @@ React Native Gradient Text is a custom, reusable component for displaying text w
 To install this component, run:
 
 \`\`\`bash
-npm install react-native-gradient-text
+npm install mag-react-native-gradient-text
 \`\`\`
 
 ## Usage

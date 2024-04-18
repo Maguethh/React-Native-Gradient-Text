@@ -1,5 +1,5 @@
 {
-  "name": "react-native-gradient-text",
+  "name": "mag-react-native-gradient-text",
   "version": "1.0.0",
   "description": "Simple react native component for expo, featuring a simple customizable gradient text component",
   "main": "index.js",
