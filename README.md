@@ -41,7 +41,7 @@ import GradientText from "mag-react-native-gradient-text";
 
 ## Dependencies
 
-This component relies on the following peer dependencies:
+This component relies on the following peer dependencies :
 
 - `react`
 - `react-native`
