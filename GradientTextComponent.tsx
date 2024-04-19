@@ -1,9 +1,39 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import MaskedView from "@react-native-masked-view/masked-view";
 
-export default function GradientText({
+// Define the props for the GradientText component // Définir les props pour le composant GradientText //
+interface GradientTextProps {
+  text: string | string[];
+  leftColor: string;
+  rightColor: string;
+  fontSize?: number;
+  marginLeft?: number;
+  marginTop?: number;
+  marginRight?: number;
+  marginBottom?: number;
+  textDecorationLine?:
+    | "none"
+    | "underline"
+    | "line-through"
+    | "underline line-through";
+  fontWeight?:
+    | "normal"
+    | "bold"
+    | "100"
+    | "200"
+    | "300"
+    | "400"
+    | "500"
+    | "600"
+    | "700"
+    | "800"
+    | "900";
+  textAlign?: "auto" | "left" | "right" | "center" | "justify";
+}
+
+const GradientText: React.FC<GradientTextProps> = ({
   text = "",
   leftColor,
   rightColor,
@@ -15,23 +45,23 @@ export default function GradientText({
   textDecorationLine = "none",
   fontWeight = "normal",
   textAlign = "center",
-}: any) {
-  // Convert text to array if it's a string
+}) => {
+  // Convert text to array if it's a string // Convertir le texte en tableau si c'est une chaîne de caractères //
   const lines = Array.isArray(text) ? text : [text];
 
-  // Calculate container height based on number of lines
+  // Calculate container height based on number of lines // Calculer la hauteur du conteneur en fonction du nombre de lignes //
   const containerHeight = lines.length * fontSize * 1.3;
 
   return (
     <View
       style={[
-        styles.TextGradientContainer,
         {
           height: containerHeight,
           marginLeft,
           marginTop,
           marginRight,
           marginBottom,
+          width: "100%",
         },
       ]}
     >
@@ -45,8 +75,12 @@ export default function GradientText({
         maskElement={
           <Text
             style={[
-              styles.TextGradient,
-              { fontSize, textDecorationLine, fontWeight, textAlign },
+              {
+                fontSize,
+                textDecorationLine,
+                fontWeight,
+                textAlign: textAlign || "center",
+              },
             ]}
           >
             {lines.join("\n")}
@@ -62,13 +96,6 @@ export default function GradientText({
       </MaskedView>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  TextGradient: {
-    textAlign: "center",
-  },
-  TextGradientContainer: {
-    width: "100%",
-  },
-});
+export default GradientText;
